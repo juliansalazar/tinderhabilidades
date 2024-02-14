@@ -1,5 +1,6 @@
 // 1- Importar Express
 const express = require('express');
+const userRouter = require('../Proyecto_Kata_Backend-TinderHabilidades/api/v1/users.js');
 
 // 2- Crear el servidor
 const app = express();
@@ -14,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 // 6- Importar las rutas
-
+app.use(userRouter);
 
 // 5- Levantar el servidor
 app.listen(3001, () => {
